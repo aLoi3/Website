@@ -1,0 +1,5 @@
+* Responsive design - when window is shrinked everything is in the wrong place
+^ Reduce font-size of intro
+^ Reduce font-size of skills and place them in the middle?
+^ Change position of text inside an image when window shrinks
+^ Change image position and how it's alligned
