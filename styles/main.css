@@ -34,7 +34,6 @@ body
 	text-decoration: none;
 	outline: none;
 	border: none;
-	opacity:;
 }
 
 .navbar button:hover
@@ -62,7 +61,7 @@ h1
 	color: white;
 	text-align: center;
 	font-size: 26px;
-	margin: 0 20%;
+	margin: 0 10%;
 }
 
 /* PROJECTS */
@@ -70,9 +69,6 @@ h1
 {
 	background: #545454;
 	padding: 20px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 }
 
 .games figure
@@ -84,7 +80,7 @@ h1
 .games figure a
 {
 	display: inline-block;
-	width: 90%;
+	width: 100%;
 }
 
 .games figure a img
@@ -92,13 +88,12 @@ h1
 	border: 1px solid white;
 	box-shadow: black 0 0 10px;
 	width: 100%;
-	margin: 5% 0 0 5%;
+	margin: 0px;
 }
 
 .container
 {
 	position: relative;
-	width: auto;
 }
 
 .image
@@ -106,6 +101,13 @@ h1
 	opacity: 1;
 	transition: .5s ease;
 	backface-visibility: hidden;
+	float: left;
+}
+
+.description
+{
+	display: flex;
+	float: left;
 }
 
 .link:hover .image
@@ -120,26 +122,22 @@ h1
 
 .middle
 {
-	transition: .5s ease;
+	margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 	opacity: 0;
-	position: absolute;
-	top: 45%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	text-align: center;
-}
-
-.middle a
-{
-	text-decoration: none;
+	transition: opacity .25s ease-in-out;
 }
 
 .text
 {
 	color: white;
 	font-size: 16px;
-	padding: 16px 32px;
+	width: 100%;
+	height: 100%;
 }
 
 /* SKILLS */
@@ -200,3 +198,59 @@ ul .c\+\+
 }
 
 /* RESPONSIVE DESIGN */
+@media screen and (max-width: 1024px)
+{
+	#intro
+	{
+		font-size: 20px;
+	}
+	
+	.skills
+	{
+		font-size: 20px;
+	}
+	
+	.skills ul li
+	{
+		border: 1.5px solid black;
+		border-radius: 20px;
+		padding: 3px;
+		margin: 0 2px;
+	}
+	
+	.about
+	{
+		background-color: #ACACAC;
+		color: black;
+		padding: 5px;
+		font-size: 16px;
+	}
+	
+}
+@media screen and (max-width: 420px)
+{
+	#intro
+	{
+		font-size: 8px;
+		margin: 0 10%;
+	}
+	
+	.skills
+	{
+		font-size: 8px;
+	}
+	
+	.skills ul li
+	{
+		border: 0.5px solid black;
+		border-radius: 20px;
+		padding: 2px;
+		margin: 0 2px;
+	}
+	
+	.about
+	{
+		padding: 5px;
+		font-size: 6px;
+	}
+}
